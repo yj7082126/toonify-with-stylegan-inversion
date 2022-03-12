@@ -203,7 +203,7 @@ def convert_tf_generator(tf_G, type="stylegan2"):
     #for name, value in tf_params.items(): print(f'{name:<50s}{list(value.shape)}')
 
     # Convert params.
-    from training import networks_stylegan2
+    from models import networks_stylegan2
     G = networks_stylegan2.Generator(**kwargs).eval().requires_grad_(False)
     # pylint: disable=unnecessary-lambda
     _populate_module_params(G,
@@ -300,7 +300,7 @@ def convert_tf_discriminator(tf_D):
     #for name, value in tf_params.items(): print(f'{name:<50s}{list(value.shape)}')
 
     # Convert params.
-    from training import networks_stylegan2
+    from models import networks_stylegan2
     D = networks_stylegan2.Discriminator(**kwargs).eval().requires_grad_(False)
     # pylint: disable=unnecessary-lambda
     _populate_module_params(D,

@@ -18,7 +18,7 @@ if __name__ == "__main__":
         help="Finetuned StyleGAN Generator to act as low resolution layer components")
     parser.add_argument("--network_type", type=str, default="stylegan2", choices=["stylegan2", "stylegan3"], 
         help="Which type of stylegan to use.")
-    parser.add_argument("--blend_lv", type=int, default=16, 
+    parser.add_argument("--blend_lv", type=int, default=8, 
         help="If StyleGAN2 : Image resolution for style blending.\n If StyleGAN3 : Network layer for style blending.")
     parser.add_argument("--output_path", type=Path, default=None, help="Output directory")
     args = parser.parse_args()
